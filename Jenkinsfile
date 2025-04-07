@@ -23,7 +23,7 @@ pipeline {
 
         stage('Test Terraform') {
             steps {
-                dir('terraform_intregated') {
+                dir('terraform-dotnet') {
                     bat 'terraform --version'
                 }
             }
@@ -31,7 +31,7 @@ pipeline {
 
         stage("terraform setup") {
             steps {
-                dir("terraform_intregated") {
+                dir("terraform-dotnet") {
                     bat 'terraform init'
                     bat 'terraform plan -out=tfplan'
                     bat 'terraform apply -auto-approve tfplan'
