@@ -1,6 +1,7 @@
 pipeline {
     agent any
     environment {
+         PATH = "${env.PATH};C:\\Users\\Harsh\\Desktop\\terraform_1.11.3_windows_386"
         AZURE_CREDENTIALS_ID = 'azure-service-principal'
         RESOURCE_GROUP = 'rg-dot-resource'
         APP_SERVICE_NAME = 'dot-app-service'
